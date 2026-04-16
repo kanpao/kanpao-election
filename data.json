@@ -1,0 +1,15 @@
+const DATA_URL = 'data.json'; 
+
+async function loadData() {
+  try {
+    // ดึงข้อมูลจากไฟล์ JSON ใน GitHub Pages
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    const data = await res.json();
+    if (data) {
+      electionData = data;
+      render();
+    }
+  } catch(e) { 
+    console.error("Fetch Error: ตรวจสอบว่าไฟล์ data.json ถูกสร้างหรือยัง"); 
+  }
+}
