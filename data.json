@@ -1,15 +1,783 @@
-const DATA_URL = 'data.json'; 
-
-async function loadData() {
-  try {
-    // ดึงข้อมูลจากไฟล์ JSON ใน GitHub Pages
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
-    const data = await res.json();
-    if (data) {
-      electionData = data;
-      render();
+{
+  "showWinnerEffects": "OFF",
+  "showSummaryTab": "ON",
+  "showMayorTab": "ON",
+  "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
+  "lastUpdate": 1776330887688,
+  "candidates": [
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ทองผาภูมิ",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ทองผาภูมิ",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ด่านมะขามเตี้ย",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ด่านมะขามเตี้ย",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ศรีสวัสดิ์",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ศรีสวัสดิ์",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "สังขละบุรี",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "สังขละบุรี",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "หนองปรือ",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "หนองปรือ",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ห้วยกระเจา",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ห้วยกระเจา",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "ไทรโยค",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "ไทรโยค",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "บ่อพลอย",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "บ่อพลอย",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "พนมทวน",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "พนมทวน",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "เลาขวัญ",
+      "zone": "นายก อบจ.",
+      "number": 1,
+      "name": "นายชัยยศ พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "blue",
+      "score": 10000
+    },
+    {
+      "district": "เลาขวัญ",
+      "zone": "นายก อบจ.",
+      "number": 2,
+      "name": "นายชาติชาญ เล่นเอาขำ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "red",
+      "score": 9999
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 1,
+      "number": 1,
+      "name": "นายหล่อ พิลึก",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "green",
+      "score": 10001
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 1,
+      "number": 2,
+      "name": "นายการหาญ โดนอม",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "#f97316",
+      "score": 9999
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 2,
+      "number": 3,
+      "name": "นายมนศักดิ์ กางมุ้งคอย",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 2,
+      "number": 4,
+      "name": "นางสร้อยเหม็น ฟางน้อย",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 3,
+      "number": 5,
+      "name": "นางลำเทียน จ้องผสมพันธุ์",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 3,
+      "number": 6,
+      "name": "นายหวังนที จู๋ยืนยง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 4,
+      "number": 7,
+      "name": "นายอธิป จู๋กระจ่าง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 4,
+      "number": 8,
+      "name": "นายบรรจง หนึ่งในยุทธจักร",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 5,
+      "number": 9,
+      "name": "นายสมศักดิ์ หวังกระแทกคาง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 5,
+      "number": 10,
+      "name": "นายบุญพอ มีเท",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 6,
+      "number": 11,
+      "name": "นายแสง บาดตาสาว",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": 6,
+      "number": 12,
+      "name": "นางเกิดใหม่ รวยจริงนะ",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 1,
+      "number": 13,
+      "name": "นางสาวจรัสวิภา กล้านอนหงาย",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 1,
+      "number": 14,
+      "name": "นางสายใจ เกาะมหาสนุก",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 2,
+      "number": 15,
+      "name": "นายสมศักดิ์ หวังกระแทกคาง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 2,
+      "number": 16,
+      "name": "นายหวังนที จู๋ยืนยง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 3,
+      "number": 17,
+      "name": "นายณรงค์ นัดใช้ปืน",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 3,
+      "number": 18,
+      "name": "นายกันภัย สูญสิ้นภัย",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 4,
+      "number": 19,
+      "name": "นายอูโน่ หลาวทอง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 4,
+      "number": 20,
+      "name": "นายศักดิพันธ์ ชอบนอนหงาย",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 5,
+      "number": 21,
+      "name": "นางกนกกร เม่งเวหา",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ท่ามะกา",
+      "zone": 5,
+      "number": 22,
+      "name": "นางสาวรรรรรร อ่านว่า ระ-รัน-รอน",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 1,
+      "number": 23,
+      "name": "นายท่านฮ่องเต้ สมลุนาวัน",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 1,
+      "number": 24,
+      "name": "นางนาวนารัตน์ พัดลม",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 2,
+      "number": 25,
+      "name": "พล.อ.การุณ เก่งระดมยิง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 2,
+      "number": 26,
+      "name": "นางสาวชะรอยจุติมา จากสวรรรค์",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 3,
+      "number": 27,
+      "name": "นางสาวแลคโตเย่น นมกล่อง",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 3,
+      "number": 28,
+      "name": "นายดินทะยาน แจงใส",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 4,
+      "number": 29,
+      "name": "นายไพรัตน์ หม้อน้ำร้อน",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ท่าม่วง",
+      "zone": 4,
+      "number": 30,
+      "name": "นายภาคภูมิ ด้วนรู้ที่",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ทองผาภูมิ",
+      "zone": 1,
+      "number": 31,
+      "name": "นายหรูหรา ออมตอง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ทองผาภูมิ",
+      "zone": 1,
+      "number": 32,
+      "name": "นางสาววรุณนาโศรก จันทรคดี",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ทองผาภูมิ",
+      "zone": 2,
+      "number": 33,
+      "name": "นางสาวหรินาท ปรปักษ์เป็นจุล",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ทองผาภูมิ",
+      "zone": 2,
+      "number": 34,
+      "name": "นางสาววรต อกระโทก",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ด่านมะขามเตี้ย",
+      "zone": 1,
+      "number": 35,
+      "name": "นายบริสุทธิ์ อยู่มั้ย",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ด่านมะขามเตี้ย",
+      "zone": 1,
+      "number": 36,
+      "name": "นายนิธินัย เหินเวหา",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ศรีสวัสดิ์",
+      "zone": 1,
+      "number": 37,
+      "name": "นายนักรบ ชนะราวี",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ศรีสวัสดิ์",
+      "zone": 1,
+      "number": 38,
+      "name": "นายสงคราม ชนะราวี ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "สังขละบุรี",
+      "zone": 1,
+      "number": 39,
+      "name": "นางติ๊บ บุญนำ",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "สังขละบุรี",
+      "zone": 1,
+      "number": 40,
+      "name": "นายแคน อัครฮาก",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "หนองปรือ",
+      "zone": 1,
+      "number": 41,
+      "name": "นายอ๊อด ไชโย",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "หนองปรือ",
+      "zone": 1,
+      "number": 42,
+      "name": "นายบารมี สมาธิปัญญา",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ห้วยกระเจา",
+      "zone": 1,
+      "number": 43,
+      "name": "นางบานพับ ห้องสุขา",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ห้วยกระเจา",
+      "zone": 1,
+      "number": 44,
+      "name": "นายบรรพต เจ็ดพี่น้องร่วมใจ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ไทรโยค",
+      "zone": 1,
+      "number": 45,
+      "name": "นางสาวบุญศรัทธา มหามงคล",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "ไทรโยค",
+      "zone": 1,
+      "number": 46,
+      "name": "นายหินชนวน อโศก",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "ไทรโยค",
+      "zone": 2,
+      "number": 47,
+      "name": "นางจันมี โถรองมูล",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "ไทรโยค",
+      "zone": 2,
+      "number": 48,
+      "name": "นายอัฐพล อดเก่ง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "บ่อพลอย",
+      "zone": 1,
+      "number": 49,
+      "name": "นายนารูโต๊ะ นินจาจอมคาถา",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 8888
+    },
+    {
+      "district": "บ่อพลอย",
+      "zone": 1,
+      "number": 50,
+      "name": "นายโดเรมอน แมวสีฟ้า",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "บ่อพลอย",
+      "zone": 2,
+      "number": 51,
+      "name": "นายโงกุน ดราก้อนบอล",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "บ่อพลอย",
+      "zone": 2,
+      "number": 52,
+      "name": "นายซาโตชิ โปเกมอน",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "พนมทวน",
+      "zone": 1,
+      "number": 53,
+      "name": "นายซาคุรางิ สแลมดั้ง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "พนมทวน",
+      "zone": 1,
+      "number": 54,
+      "name": "นางสาวอุซางิ เซเลอร์มูน",
+      "image": "https://lh3.googleusercontent.com/d/1yNKYXEIzKX3GdQmshCHfKfGBDIOQtFtC",
+      "color": "",
+      "score": 9999
+    },
+    {
+      "district": "พนมทวน",
+      "zone": 2,
+      "number": 55,
+      "name": "นายชินจัง ชินโนะสึเกะ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10001
+    },
+    {
+      "district": "พนมทวน",
+      "zone": 2,
+      "number": 56,
+      "name": "นายเคนตะ วิงแมน",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "เลาขวัญ",
+      "zone": 1,
+      "number": 57,
+      "name": "นายโคนัน ยอดนักสืบจิ๋ว",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10001
+    },
+    {
+      "district": "เลาขวัญ",
+      "zone": 1,
+      "number": 58,
+      "name": "นายเร็ตสึ นักซิ่งสายฟ้า let's & go",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "เลาขวัญ",
+      "zone": 2,
+      "number": 59,
+      "name": "นายลูฟี่ วันพีซ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 10000
+    },
+    {
+      "district": "เลาขวัญ",
+      "zone": 2,
+      "number": 60,
+      "name": "นายกอน ฟรีคส์ ฮันเตอร์ x ฮันเตอร์ ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "",
+      "score": 9999
     }
-  } catch(e) { 
-    console.error("Fetch Error: ตรวจสอบว่าไฟล์ data.json ถูกสร้างหรือยัง"); 
-  }
+  ]
 }
