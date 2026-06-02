@@ -6,38 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/ico" href="https://kanpao.github.io/images/favicon.ico">
   <link rel="icon" href="https://kanpao.github.io/images/favicon.png" sizes="16x16 32x32 64x64" type="image/png">
-  <title>ผลคะแนนเลือกตั้งสมาชิกสภา อบจ. และนายก อบจ.กาญจนบุรี</title>
-  <meta name="description" content="เกาะติดผลคะแนนเลือกตั้งสมาชิกสภา อบจ. และนายก อบจ.กาญจนบุรี แบบเรียลไทม์ (อย่างไม่เป็นทางการ)">
+  <title>ผลคะแนนเลือกตั้งสมาชิกสภา อบจ. และนายก อบจ.กาญจนบุรี 2570</title>
+  <meta name="description" content="เกาะติดผลคะแนนเลือกตั้งสมาชิกสภา อบจ. และนายก อบจ.กาญจนบุรี 2570 แบบเรียลไทม์ (อย่างไม่เป็นทางการ)">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kanpao.github.io/election/">
-  <meta property="og:title" content="🔴 เกาะติดผลคะแนนเลือกตั้ง ส.อบจ.กาญจนบุรี และนายก อบจ.กาญจนบุรี">
-  <meta property="og:description" content="ดูผลคะแนนล่าสุด! การเลือกตั้ง ส.อบจ.กาญจนบุรี และนายก อบจ.กาญจนบุรี คลิกเพื่อดูรายละเอียด">
+  <meta property="og:title" content="🔴 เกาะติดผลคะแนนเลือกตั้ง ส.อบจ.กาญจนบุรี และนายก อบจ.กาญจนบุรี 2570">
+  <meta property="og:description" content="ดูผลคะแนนล่าสุด! การเลือกตั้ง ส.อบจ.กาญจนบุรี และนายก อบจ.กาญจนบุรี 2570 คลิกเพื่อดูรายละเอียด">
   <meta property="og:image" content="https://kanpao.github.io/election/images/share-cover-election.jpg">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   
   <style>
-    /* นำเข้าฟอนต์ LINESeedSansTH แบบปกติ (Regular) */
     @font-face {
       font-family: 'LINESeedSansTH';
       src: url('https://artwan.github.io/fonts/LINESeedSansTH/LINESeedSansTH_W_Rg.woff2') format('woff2');
-      font-weight: normal; /* หรือ 400 */
+      font-weight: normal;
       font-style: normal;
       font-display: swap;
     }
-
-    /* นำเข้าฟอนต์ LINESeedSansTH แบบหนา (Bold) */
     @font-face {
       font-family: 'LINESeedSansTH';
       src: url('https://artwan.github.io/fonts/LINESeedSansTH/LINESeedSansTH_W_Bd.woff2') format('woff2');
-      font-weight: bold; /* หรือ 700 */
+      font-weight: bold;
       font-style: normal;
       font-display: swap;
     }
 
-    /* สั่งให้ทุกส่วนในเว็บใช้ฟอนต์ใหม่ */
     * { font-family: 'LINESeedSansTH', sans-serif; }
     .gradient-bg { background: linear-gradient(135deg, #1a3263 0%, #547792 100%); min-height: 100vh; display: flex; flex-direction: column; }
     .card-hover { transition: all 0.3s ease; }
@@ -77,8 +73,9 @@
         60% { transform: translateY(-4px); }
     }
 
-    .list-card { background: #FFFFFF; border: 1px solid rgba(0, 0, 0, 0.05); }
-    .winner-spacing { margin-top: 60px !important; }
+    .list-card { background: #FFFFFF; border: 1px solid rgba(0, 0, 0, 0.05); overflow: visible !important; }
+    .winner-spacing { margin-top: 50px !important; }
+    
     .desktop-nav { display: none; flex-wrap: nowrap; justify-content: center; gap: 4px; overflow-x: auto; scrollbar-width: none; }
     .desktop-nav::-webkit-scrollbar { display: none; }
     @media (min-width: 1024px) { .desktop-nav { display: flex; } .mobile-nav-toggle { display: none; } }
@@ -97,22 +94,22 @@
   
   <header class="sticky top-0 z-[100] bg-white/95 border-b border-blue-100 backdrop-blur-md px-4 py-3 shadow-md">
     <div class="container mx-auto flex justify-between items-center gap-4">
-      <div class="flex items-center gap-2 md:gap-3 min-w-0 md:shrink-0">
+      <div class="flex items-center gap-2 md:gap-3 min-w-0 md:shrink-0 max-w-[70%] md:max-w-none">
         <img src="https://kanpao.github.io/images/kanpao-logo-160px.png" class="w-10 h-10 md:w-12 md:h-12 object-contain shrink-0" alt="Logo">
         <div class="min-w-0">
-          <h1 id="main-header-title" class="text-sm sm:text-sm md:text-base font-black tracking-tight leading-tight uppercase text-slate-800">
-            กำลังโหลดข้อมูล...
+          <h1 id="main-header-title" class="text-xs sm:text-sm md:text-base font-black tracking-tight leading-tight uppercase text-slate-800 truncate">
+            เลือกตั้งสมาชิกสภา อบจ.กาญจนบุรี <br class="md:hidden">และนายก อบจ. <span class="text-blue-600">2570</span>
           </h1>
         </div>
       </div>
       <nav class="desktop-nav flex-1 px-2"></nav>
-      
       <button onclick="toggleMobileMenu()" class="mobile-nav-toggle p-2 bg-blue-600 rounded-lg text-white shadow-md shrink-0">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
       </button>
     </div>
   </header>
 
+  <!-- ป้ายสัญลักษณ์ LIVE ล็อกติดตำแหน่งบนพื้นหลังน้ำเงิน -->
   <div id="live-badge" class="hidden fixed top-[75px] md:top-[85px] right-4 md:right-6 z-[90] items-center gap-1.5 bg-red-600 text-white px-2 py-1 md:px-3 md:py-1 rounded-md shadow-md animate-pulse">
     <div class="w-2 h-2 bg-white rounded-full"></div>
     <span class="text-[10px] md:text-xs font-black tracking-widest">LIVE</span>
@@ -123,7 +120,7 @@
       <h3 class="text-xl font-bold text-yellow-500 italic">เลือกเขตพื้นที่</h3>
       <button onclick="toggleMobileMenu()" class="p-2 text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
     </div>
-    <div id="mobile-nav-list" class="flex flex-col gap-3 text-center"></div>
+    <div id="mobile-nav-list" class="flex flex-col gap-3 text-center mb-6"></div>
   </div>
 
   <main class="container mx-auto px-4 max-w-4xl mt-10 flex-grow">
@@ -135,23 +132,23 @@
   </main>
 
   <footer class="text-center py-8 text-white/60 text-[10px] md:text-xs mt-10 border-t border-white/10 uppercase tracking-widest">
-    &copy; 2026 All Rights Reserved Powered by <a href="https://www.facebook.com/artwansawang" target="_blank">Mr.Wansawang Kanchanakaree</a>
+    &copy; 2026 All Rights Reserved Powered by <a href="https://artwansawang.web.app/" target="_blank">Mr.Wansawang Kanchanakaree</a>
   </footer>
 
   <script>
-    const DATA_URL = 'data.json'; 
+    const FIREBASE_URL = 'https://kanpao-election-2026-default-rtdb.asia-southeast1.firebasedatabase.app/election-data.json'; 
     const baseMenuItems = ["สรุปภาพรวม", "นายก อบจ.", "เมืองกาญจนบุรี", "ท่ามะกา", "ท่าม่วง", "ทองผาภูมิ", "ด่านมะขามเตี้ย", "ศรีสวัสดิ์", "สังขละบุรี", "หนองปรือ", "ห้วยกระเจา", "ไทรโยค", "บ่อพลอย", "พนมทวน", "เลาขวัญ"];
-    let activeMenuItems = [...baseMenuItems]; 
+    let activeMenuItems = [...baseMenuItems];
     let currentTab = ""; 
     let electionData = null;
     let hasFiredConfetti = false;
-    let lastWinnerEffects = null; 
+    let lastWinnerEffects = null;
 
     function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
 
     async function loadData() {
       try {
-        const res = await fetch(DATA_URL + '?t=' + Date.now());
+        const res = await fetch(FIREBASE_URL + '?t=' + Date.now());
         const data = await res.json();
         if (data) {
           electionData = data;
@@ -159,7 +156,7 @@
           if (electionData.headerTitle) {
             document.getElementById('main-header-title').innerHTML = electionData.headerTitle;
           }
-          
+
           activeMenuItems = baseMenuItems.filter(item => {
             if (item === "สรุปภาพรวม" && electionData.showSummaryTab === "OFF") return false;
             if (item === "นายก อบจ." && electionData.showMayorTab === "OFF") return false;
@@ -197,7 +194,7 @@
       const { candidates, showWinnerEffects, showMayorTab } = electionData;
       const list = document.getElementById('content-list');
       const title = document.getElementById('section-title');
-      const liveBadge = document.getElementById('live-badge'); 
+      const liveBadge = document.getElementById('live-badge');
 
       list.innerHTML = '';
       renderNavs();
@@ -221,9 +218,10 @@
           hasFiredConfetti = false; 
       }
 
+      // คำนวณคะแนนรวม นายก อบจ. ภาพรวม
       const globalMayorScores = {};
       candidates.forEach(c => {
-        if (c.zone && c.zone.toString().includes("นายก")) {
+        if (c.district === "นายก อบจ." || (c.zone && c.zone.toString().includes("นายก"))) {
           const key = c.number + "_" + c.name;
           if (!globalMayorScores[key]) {
             globalMayorScores[key] = { ...c, score: 0, district: "นายก อบจ." };
@@ -232,7 +230,7 @@
         }
       });
       const mayorList = Object.values(globalMayorScores).sort((a,b) => b.score - a.score);
-      const globalMayorTotalScore = mayorList.reduce((sum, c) => sum + parseInt(c.score || 0), 0); 
+      const globalMayorTotalScore = mayorList.reduce((sum, c) => sum + parseInt(c.score || 0), 0);
 
       // --- หน้าสรุปภาพรวม ---
       if (currentTab === "สรุปภาพรวม") {
@@ -242,17 +240,19 @@
            title.innerHTML = '<span class="text-yellow-300">🏆 สรุปคะแนนสูงสุด</span> (อย่างไม่เป็นทางการ)';
         }
         
+        // แสดงคะแนนรวม นายก อบจ. ด้านบนสุดในหน้าสรุป (ไม่แยกรายอำเภอ)
         if (mayorList.length > 0 && showMayorTab !== "OFF") {
            const distHeader = document.createElement('div');
            distHeader.className = "text-2xl md:text-4xl font-extrabold text-yellow-300 mt-10 mb-6 border-l-[6px] border-yellow-300 pl-4 drop-shadow-md";
-           distHeader.innerText = "นายกองค์การบริหารส่วนจังหวัด (รวมทุกอำเภอ)";
+           distHeader.innerText = "นายกองค์การบริหารส่วนจังหวัดกาญจนบุรี";
            list.appendChild(distHeader);
            list.appendChild(createCard(mayorList[0], 1, globalMayorTotalScore, true, showWinnerEffects));
         }
 
+        // ประมวลผล ส.อบจ.
         const allZones = {};
         candidates.forEach(c => {
-          if (c.zone && c.zone.toString().includes("นายก")) return; 
+          if (c.district === "นายก อบจ." || (c.zone && c.zone.toString().includes("นายก"))) return; 
           const key = c.district + '|' + c.zone; 
           if (!allZones[key]) allZones[key] = [];
           allZones[key].push(c);
@@ -261,11 +261,11 @@
         const summaryByDistrict = {};
         Object.keys(allZones).forEach(key => {
           const cList = allZones[key];
-          const zoneTotalScore = cList.reduce((sum, c) => sum + parseInt(c.score || 0), 0); 
+          const zoneTotalScore = cList.reduce((sum, c) => sum + parseInt(c.score || 0), 0);
           cList.sort((a,b) => b.score - a.score);
           if(cList.length > 0) {
             const winner = cList[0];
-            winner._zoneTotalScore = zoneTotalScore; 
+            winner._zoneTotalScore = zoneTotalScore;
             const dist = winner.district;
             if(!summaryByDistrict[dist]) summaryByDistrict[dist] = [];
             summaryByDistrict[dist].push(winner);
@@ -275,13 +275,12 @@
         const sortedDistricts = Object.keys(summaryByDistrict).sort((a,b) => baseMenuItems.indexOf(a) - baseMenuItems.indexOf(b));
 
         sortedDistricts.forEach(dist => {
-           const distHeader = document.createElement('div');
-           distHeader.className = "text-2xl md:text-4xl font-extrabold text-white mt-10 mb-6 border-l-[6px] border-white pl-4 drop-shadow-md opacity-90";
-           distHeader.innerText = `อ.${dist}`;
-           list.appendChild(distHeader);
-
            const winners = summaryByDistrict[dist].sort((a,b) => parseInt(a.zone||0) - parseInt(b.zone||0));
            winners.forEach(winner => {
+             const distHeader = document.createElement('div');
+             distHeader.className = "text-2xl md:text-4xl font-extrabold text-white mt-10 mb-6 border-l-[6px] border-white pl-4 drop-shadow-md opacity-90";
+             distHeader.innerText = `อ.${dist} เขต ${winner.zone}`;
+             list.appendChild(distHeader);
              list.appendChild(createCard(winner, 1, winner._zoneTotalScore, true, showWinnerEffects));
            });
         });
@@ -289,23 +288,24 @@
       // --- หน้านายก อบจ. ---
       } else if (currentTab === "นายก อบจ.") {
         if (showWinnerEffects === 'ON') {
-            title.innerHTML = '<span class="trophy-glow">🏆</span> ผลคะแนนรวม นายก อบจ.กาญจนบุรี (นับรวมทุกอำเภอ)';
+            title.innerHTML = '<span class="trophy-glow">🏆</span> ผลคะแนนรวม นายก อบจ.กาญจนบุรี (นับรวมทุกอำเภออย่างไม่เป็นทางการ)';
         } else {
-            title.innerText = "ผลคะแนนรวม นายก อบจ.กาญจนบุรี (นับรวมทุกอำเภอ)";
+            title.innerText = "ผลคะแนนรวม นายก อบจ.กาญจนบุรี (นับรวมทุกอำเภออย่างไม่เป็นทางการ)";
         }
         mayorList.forEach((c, i) => list.appendChild(createCard(c, i+1, globalMayorTotalScore, false, showWinnerEffects)));
 
       // --- หน้าแต่ละอำเภอ ---
       } else {
         if (showWinnerEffects === 'ON') {
-            title.innerHTML = `<span class="trophy-glow">🏆</span> ผลการเลือกตั้ง เขตอำเภอ${currentTab}`;
+            title.innerHTML = `<span class="trophy-glow">🏆</span> ผลการเลือกตั้ง เขตอำเภอ${currentTab} (อย่างไม่เป็นทางการ)`;
         } else {
-            title.innerText = `ผลการเลือกตั้ง เขตอำเภอ${currentTab}`;
+            title.innerText = `ผลการเลือกตั้ง เขตอำเภอ${currentTab} (อย่างไม่เป็นทางการ)`;
         }
         
         const distCandidates = candidates.filter(c => c.district === currentTab);
         
-        const distMayors = distCandidates.filter(c => c.zone && c.zone.toString().includes("นายก")).sort((a,b) => b.score - a.score);
+        // แสดงนายก อบจ. ประจำอำเภอนี้ก่อนเรียงตามคะแนน
+        const distMayors = distCandidates.filter(c => c.district === "นายก อบจ." || (c.zone && c.zone.toString().includes("นายก"))).sort((a,b) => b.score - a.score);
         if (distMayors.length > 0 && showMayorTab !== "OFF") {
            const mayorHeader = document.createElement('div');
            mayorHeader.className = "text-2xl md:text-4xl font-extrabold text-yellow-300 mt-10 mb-6 border-l-[6px] border-yellow-300 pl-4 drop-shadow-md";
@@ -316,15 +316,16 @@
            distMayors.forEach((c, i) => list.appendChild(createCard(c, i+1, distMayorTotalScore, false, showWinnerEffects)));
         }
 
-        const councilCands = distCandidates.filter(c => !(c.zone && c.zone.toString().includes("นายก")));
+        // แสดง ส.อบจ. แยกตามเขต
+        const councilCands = distCandidates.filter(c => !(c.district === "นายก อบจ." || (c.zone && c.zone.toString().includes("นายก"))));
         const zones = {};
         councilCands.forEach(c => { const z = c.zone || "ทั่วไป"; if(!zones[z]) zones[z] = []; zones[z].push(c); });
         const sortedZones = Object.keys(zones).sort((a,b) => parseInt(a) - parseInt(b));
 
         sortedZones.forEach(z => {
            const zoneHeader = document.createElement('div');
-           zoneHeader.className = "text-2xl md:text-4xl font-extrabold text-white mt-10 mb-6 border-l-[6px] border-blue-400 pl-4 drop-shadow-md";
-           zoneHeader.innerText = `ส.อบจ. เขต ${z}`;
+           zoneHeader.className = "text-4xl font-extrabold text-white mt-10 mb-6 border-l-[6px] border-blue-400 pl-4 drop-shadow-md";
+           zoneHeader.innerText = `เขต ${z}`;
            list.appendChild(zoneHeader);
 
            const cList = zones[z].sort((a,b) => b.score - a.score);
@@ -370,33 +371,31 @@
       const div = document.createElement('div');
       const pct = totalScore > 0 ? (c.score / totalScore) * 100 : 0;
       const pctText = pct.toFixed(2) + "%"; 
-      const useFullEffect = (rank === 1 && winnerStatus === 'ON');
+      
+      const isWinnerOn = (rank === 1 && winnerStatus === 'ON');
+      const useFullEffect = (isWinnerOn && !isSum);
 
-      const crown = useFullEffect ? '<div class="absolute -top-12 left-6 text-5xl bounce-anim">👑</div>' : '';
+      const crown = useFullEffect ? '<div class="absolute -top-14 left-6 text-5xl bounce-anim">👑</div>' : '';
       const trophy = useFullEffect ? '<span class="ml-1 bounce-anim text-3xl solid-gold-trophy align-middle">🏆</span>' : '';
       const winnerText = useFullEffect ? '<p class="text-sm md:text-lg text-yellow-600 font-bold animate-pulse mt-1 drop-shadow-sm leading-tight">🏅 ผู้ชนะคะแนนเลือกตั้งอย่างไม่เป็นทางการ</p>' : '';
 
-      // --- ส่วนจัดการสีตามพรรค (Custom Colors) ---
-      // 1. สีขอบรูป Avatar (ใช้ border-[3px] ให้เส้นหนาขึ้นเพื่อให้เห็นสีชัดเจน)
       let avatarStyle = "";
       let avatarClass = "border-[3px]"; 
       
       if (c.color) {
           avatarStyle = `border-color: ${c.color};`;
-          if (useFullEffect) avatarStyle += ` box-shadow: 0 0 15px ${c.color};`; // ถ้าชนะให้มีแสงเรืองแสงสีพรรค
+          if (useFullEffect) avatarStyle += ` box-shadow: 0 0 15px ${c.color};`;
       } else {
-          // ถ้าไม่มีสีพรรค ให้ใช้สีพื้นฐาน (สีทองถ้าชนะ, สีเทาถ้าปกติ)
           avatarClass += useFullEffect ? " border-yellow-400 shadow-md" : " border-slate-300";
       }
 
-      // 2. สีหลอดคะแนน Progress bar
       const barStyle = c.color 
           ? `width:${pct}%; background-color: ${c.color};` 
           : `width:${pct}%; background-image: linear-gradient(to right, #2563eb, #22d3ee);`;
 
       let districtLabel = "";
       if (isSum) {
-         districtLabel = (c.district === "นายก อบจ.") ? "ผู้สมัครนายก อบจ." : `เขต ${c.zone}`; 
+         districtLabel = (c.district === "นายก อบจ." || (c.zone && c.zone.toString().includes("นายก"))) ? "ผู้สมัครนายก อบจ." : `เขต ${c.zone}`; 
       } else if (c.district === "นายก อบจ." || (c.zone && c.zone.toString().includes("นายก"))) {
          districtLabel = "ผู้สมัครนายก อบจ.";
       }
@@ -435,7 +434,7 @@
       return div;
     }
 
-    setInterval(loadData, 30000);
+    setInterval(loadData, 10000);
     window.onload = loadData;
   </script>
 </body>
