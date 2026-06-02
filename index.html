@@ -17,10 +17,28 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
   
   <style>
-    * { font-family: 'Kanit', sans-serif; }
+    /* นำเข้าฟอนต์ LINESeedSansTH แบบปกติ (Regular) */
+    @font-face {
+      font-family: 'LINESeedSansTH';
+      src: url('https://artwan.github.io/fonts/LINESeedSansTH/LINESeedSansTH_W_Rg.woff2') format('woff2');
+      font-weight: normal; /* หรือ 400 */
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* นำเข้าฟอนต์ LINESeedSansTH แบบหนา (Bold) */
+    @font-face {
+      font-family: 'LINESeedSansTH';
+      src: url('https://artwan.github.io/fonts/LINESeedSansTH/LINESeedSansTH_W_Bd.woff2') format('woff2');
+      font-weight: bold; /* หรือ 700 */
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* สั่งให้ทุกส่วนในเว็บใช้ฟอนต์ใหม่ */
+    * { font-family: 'LINESeedSansTH', sans-serif; }
     .gradient-bg { background: linear-gradient(135deg, #1a3263 0%, #547792 100%); min-height: 100vh; display: flex; flex-direction: column; }
     .card-hover { transition: all 0.3s ease; }
     .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
