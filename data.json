@@ -1,9 +1,9 @@
 {
-  "showWinnerEffects": "ON",
-  "showSummaryTab": "ON",
+  "showWinnerEffects": "OFF",
+  "showSummaryTab": "OFF",
   "showMayorTab": "ON",
   "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
-  "lastUpdate": 1780389418836,
+  "lastUpdate": 1780389479420,
   "candidates": [
     {
       "district": "เมืองกาญจนบุรี",
