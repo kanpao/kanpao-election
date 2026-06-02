@@ -1,9 +1,9 @@
 {
   "showWinnerEffects": "OFF",
-  "showSummaryTab": "ON",
+  "showSummaryTab": "OFF",
   "showMayorTab": "ON",
   "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
-  "lastUpdate": 1780384498315,
+  "lastUpdate": 1780386775575,
   "candidates": [
     {
       "district": "เมืองกาญจนบุรี",
@@ -30,7 +30,7 @@
       "name": "นายชัยยศ พรหมจารีย์พินาศ",
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
       "color": "blue",
-      "score": 10000
+      "score": 9999
     },
     {
       "district": "ท่ามะกา",
@@ -39,7 +39,7 @@
       "name": "นายชาติชาญ เล่นเอาขำ",
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
       "color": "red",
-      "score": 9999
+      "score": 10000
     },
     {
       "district": "ท่าม่วง",
