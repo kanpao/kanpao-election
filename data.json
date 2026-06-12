@@ -3,7 +3,7 @@
   "showSummaryTab": "OFF",
   "showMayorTab": "ON",
   "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
-  "lastUpdate": 1781233811513,
+  "lastUpdate": 1781239442227,
   "candidates": [
     {
       "district": "เมืองกาญจนบุรี",
@@ -778,6 +778,24 @@
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
       "color": "",
       "score": 9999
+    },
+    {
+      "district": "",
+      "zone": "",
+      "number": "",
+      "name": "",
+      "image": "",
+      "color": "",
+      "score": 0
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": "นายก อบจ.",
+      "number": 3,
+      "name": "นายวันสว่าง กาญจนการี",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "Green",
+      "score": 56789
     }
   ]
 }
