@@ -4,7 +4,7 @@
   "showMayorTab": "ON",
   "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
   "showLiveBadge": "OFF",
-  "lastUpdate": 1782275557534,
+  "lastUpdate": 1782275687196,
   "candidates": [
     {
       "district": "เมืองกาญจนบุรี",
@@ -30,7 +30,7 @@
       "number": 3,
       "name": "นายอาหวัง จู๋ยืนยง",
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
-      "color": "ping",
+      "color": "pink",
       "score": 456789
     },
     {
