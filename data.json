@@ -4,7 +4,7 @@
   "showMayorTab": "ON",
   "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
   "showLiveBadge": "OFF",
-  "lastUpdate": 1782274867004,
+  "lastUpdate": 1782275322120,
   "candidates": [
     {
       "district": "เมืองกาญจนบุรี",
@@ -23,6 +23,24 @@
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
       "color": "red",
       "score": 10000
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": "นายก อบจ.",
+      "number": 3,
+      "name": "นายอาหวัง จู๋ยืนยง",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "Green",
+      "score": 456789
+    },
+    {
+      "district": "เมืองกาญจนบุรี",
+      "zone": "นายก อบจ.",
+      "number": 4,
+      "name": "นางสาวส้มฉุน พรหมจารีย์พินาศ",
+      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
+      "color": "orange",
+      "score": 456789
     },
     {
       "district": "ท่ามะกา",
@@ -255,7 +273,7 @@
       "number": 2,
       "name": "นายการหาญ โดนอม",
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
-      "color": "#f97316",
+      "color": "orange",
       "score": 9999
     },
     {
@@ -779,33 +797,6 @@
       "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
       "color": "",
       "score": 9999
-    },
-    {
-      "district": "",
-      "zone": "",
-      "number": "",
-      "name": "",
-      "image": "",
-      "color": "",
-      "score": 0
-    },
-    {
-      "district": "",
-      "zone": "",
-      "number": "",
-      "name": "",
-      "image": "",
-      "color": "",
-      "score": 0
-    },
-    {
-      "district": "เมืองกาญจนบุรี",
-      "zone": "นายก อบจ.",
-      "number": 3,
-      "name": "นายอาหวัง จู๋ยืนยง",
-      "image": "https://lh3.googleusercontent.com/d/1Jl0FKsEhN5mhU3Z7Bheyz1p8v7qXW-2k",
-      "color": "Green",
-      "score": 456789
     }
   ]
 }
