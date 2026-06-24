@@ -2,9 +2,9 @@
   "showWinnerEffects": "OFF",
   "showSummaryTab": "OFF",
   "showMayorTab": "ON",
-  "headerTitle": "เลือกตั้งนายก อบจ.กาญจนบุรี <span class=\"text-blue-600\">2570</span>",
+  "headerTitle": "เลือกตั้งสมาชิกสภา อบจ.กาญจนบุรี <br class=\"md:hidden\">และนายก อบจ. <span class=\"text-blue-600\">2570</span>",
   "showLiveBadge": "OFF",
-  "lastUpdate": 1782274493923,
+  "lastUpdate": 1782274833140,
   "candidates": [
     {
       "district": "เมืองกาญจนบุรี",
